@@ -15,9 +15,9 @@ body{
 
 /* utility class */
 .container{
-    display: flex;
+    display: flex;   
     
-    height: calc(100vh - 70px);  /* 100px relativi al player */
+    height: calc(100vh - 71px);  /* 71 px relativi al player */
     
 }
 
@@ -25,9 +25,6 @@ body{
     padding-inline: 20px;
 }
 
-a{
-    text-decoration: none;
-}
 
 .title {
     text-align: center;
@@ -44,19 +41,6 @@ a{
     color: #797c80;
 }
 
-img{
-    display: block;
-    width: 100%;
-    max-width: 180px;
-    /* height: auto; */
-   
-}
-
-h2{    
-    color: white;
-}
-
-
 .button {    
     padding: 14px 40px;
 
@@ -71,15 +55,98 @@ h2{
 }
 
 
+h2{    
+    color: white;
+}
+
+li{ 
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+
 
 
 /* aside */
 aside{
+    width: 230px;
     min-width: 230px;
+    display: flex;
+    flex-direction: column;
 
-    /* test */
-    background-color: lightpink;
+    overflow: hidden;
+
+    padding: 1.5em;
+
+    font-weight: bold;
+    color: #5a5a5a;
+    background-color: black;
+    
 }
+#logo{
+    width: 140px;
+}
+
+.primary-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-block: 30px;
+    
+}
+
+
+.primary-nav .aside-icon{
+    display: inline;
+
+    margin-right: 7px ;
+    height: 26px;
+    vertical-align: middle;
+    
+}
+
+.aside-playlists{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.aside-playlists > strong{
+    
+    text-transform: uppercase;
+    color: white;
+
+}
+
+.create-playlist{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.create-playlist span:first-of-type{
+    font-size: 50px;
+}
+
+.list{
+    overflow: auto;
+}
+
+.playlist-name{
+    overflow: auto;
+    line-height: 2.3em;
+}
+
 
 
 
@@ -94,20 +161,18 @@ main{
 }
 
 
-.top-bar{
+.banner{
     position: absolute;
     width: calc(100vw - 230px);
+
+    padding: 30px 24px 35px;
+
     text-align: end;
     
-    /* test */
     background-color:rgba(0, 0, 0, 0.4);
     /* height: 80px; */
 }
 
-.upgrade{
-    /* margin: 30px 20px 40px; */
-    margin: 30px 24px 35px;
-}
 
 .secondary-nav ul{
     display: flex;
@@ -115,7 +180,7 @@ main{
     justify-content: center;
     gap: 20px;
     
-    padding-top: calc(80px + 24px);   /* 80px = altezza top-bar */
+    padding-top: calc(80px + 24px);   /* 80px = altezza banner */
     padding-bottom: 40px;
 
     list-style: none;
@@ -146,6 +211,13 @@ main{
 
 }
 
+.tile img{
+    display: block;
+    width: 100%;
+    max-width: 180px;
+   
+}
+
 
 #recently-played .subtitle{
     text-align: center;
@@ -170,42 +242,49 @@ main{
 }
 
 .player-left{
-width: 30%;
-}
-
-.song{
     display: flex;
+    align-items: center;
+    width: 33%;
+    
 }
 
-.song img{
+
+
+.player-left img{
     width: 42px;
     margin-right: 1em;
     
 }
 .song-info{
     align-self: center;
-    margin-right: 40px;
+    
 }
 
-.song .title{
+.player-left .title{
     margin: 0;
     text-align: start;
+    font-size: 12px;
 }
 
-.song .subtitle{
+.player-left .subtitle{
     margin: 0;
+    font-size: 9px;
 }
 
-.icons{
+.player-left .icons{
     align-self: center;
     color: #797c80;
+    margin-left: 40px;    
+    
 }
+
+
 .icons span:first-child{
     margin-right: 14px;
 }
 
 .player-center{
-    width: 30%;
+    width: 33%;
 }
 
 .player-buttons{
@@ -255,7 +334,14 @@ width: 30%;
     justify-content: end;
     align-items: center;
     gap: 14px;
-    width: 30%;
+
+    width: 33%;
+
+    padding-left: 8px;
+}
+
+.player-right .icons{
+    color: #797c80
 }
 
 .volume-bar{
@@ -313,10 +399,30 @@ width: 30%;
         min-width: 50px;
     }
 
-    .top-bar{
+    .banner{
         
         width: calc(100vw - 50px);
     
+    }
+
+    .player-left img{
+        width: 30px;      
+        
+    }
+    
+    .player-left .title{        
+        font-size: 14px;
+    }
+    
+    .player-left .subtitle{
+        margin: 0;
+        font-size: 10px;
+    }
+    
+    .player-left .icons{        
+        margin-left: 20px;
+        
+        
     }
     
 }
