@@ -51,18 +51,23 @@ body{
     font-weight: bold;
     text-transform: uppercase;
     color: white;
-
 }
+
+.button:hover{
+    transform: scale(1.1);
+}
+
 
 .active{
     border-left: 3px solid #c1eb7d; 
     color: white;   
 }
 
-.active a{
+.active-btm{
+    padding-bottom: 3px;
+    border-bottom: 3px solid #c1eb7d; 
     color: white;
 }
-
 
 h2{    
     color: white;
@@ -247,9 +252,11 @@ main{
 
 .banner{
     position: fixed;
+    display: flex;
+    justify-content: end;
     width: calc(100vw - 230px);
 
-    padding: 30px 24px 35px;
+    padding: 24px 24px 20px;
 
     text-align: end;
     
@@ -274,9 +281,14 @@ main{
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: bold;
-    color: #797c80;
 
 }
+
+.secondary-nav ul a:hover{
+    color: white;
+}
+
+
 
 .row{
     display: flex;
@@ -289,9 +301,7 @@ main{
 }
 
 .tile{
-
     width: calc(100% / 6 - 10px / 6 * 5);
-
 
 }
 
@@ -347,12 +357,16 @@ main{
 .player-left .title{
     margin: 0;
     text-align: start;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .player-left .subtitle{
     margin: 0;
-    font-size: 9px;
+    font-size: 11px;
+}
+
+.player-left .subtitle:hover{
+    text-decoration: underline;
 }
 
 .player-left .icons{
@@ -360,6 +374,11 @@ main{
     color: #797c80;
     margin-left: 40px;    
     
+}
+
+.player-left .fa-regular:hover{
+    color: white;
+
 }
 
 
@@ -379,8 +398,12 @@ main{
     color: white;
 }
 
-.player-buttons span:nth-of-type(3){
+.player-buttons .fa-circle-play{
     scale: 1.8;
+}
+
+.player-buttons .fa-circle-play:hover{
+    transform: scale(1.1);
 }
 
 
@@ -411,6 +434,11 @@ main{
     color: white;
 }
 
+.played-bar:hover{
+    background-color: #c1eb7d;
+    transform: scale(1.1);
+}
+
 
 
 .player-right{
@@ -431,18 +459,8 @@ main{
 .volume-bar{
     width: 120px;
 }
-.volume-bar .border-bar{
-        
-    border-radius: 10px;
-    background-color: #c1c1c1
-    
-}
 
-.volume-bar .played-bar{
-    height:3px;
-    width:30%;
-    background-color: #5a5a5a;
-}
+
 
 
 
