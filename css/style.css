@@ -163,7 +163,6 @@ aside{
 }
 
 
-
 .dowload{
     display: flex;    
 }
@@ -171,6 +170,7 @@ aside{
 .download img{
     height: 14px;
     margin-right: 5px;
+    margin-left: 5px;
     vertical-align: middle;
     
 }
@@ -178,7 +178,6 @@ aside{
 #aside-bottom hr{
     margin-block: 14px;
 }
-
 
 .user{
     display: flex;
@@ -201,8 +200,8 @@ aside{
 
 /* main */
 main{
-    
-    width: calc(100%-230px);;
+    flex-grow: 1;
+    /* width: calc(100%-230px); */
     overflow: auto;
 
     
@@ -442,7 +441,7 @@ main{
         width: 50px;
 
         padding-block: 10px;
-        
+
         justify-content: space-between;
         align-items: center;
         
@@ -478,6 +477,7 @@ main{
         display: none;
     }
 
+    
     #aside-bottom span{
         display: none;
     }
@@ -489,6 +489,18 @@ main{
     #aside-bottom img{
         margin: 0;
         padding: 0;
+    }
+
+    .download{
+        padding: 5px;
+    }
+
+    .download img{
+        height: 14px;
+        margin-right: 5px;
+        margin-left: 10px;
+        vertical-align: middle;
+        
     }
     
     
