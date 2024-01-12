@@ -73,25 +73,27 @@ a{
 
 /* aside */
 aside{
-    width: 230px;
+    position: relative;
+
     min-width: 230px;
     display: flex;
     flex-direction: column;
 
     overflow: hidden;
 
-    padding: 1.5em;
+    padding: 1.5em 1.5em .5em;
 
     font-weight: bold;
     color: #5a5a5a;
     background-color: black;
     
 }
+
 #logo{
     width: 140px;
 }
 
-.primary-nav{
+#primary-nav{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -101,24 +103,37 @@ aside{
 }
 
 
-.primary-nav .aside-icon{
-    display: inline;
+#primary-nav .nav-item{
+    display: flex;
+    align-items: center;
+}
 
+#primary-nav .nav-item:first-of-type{
+    display: none;
+}
+
+
+
+
+.nav-item .aside-icon{
+    
     margin-right: 7px ;
     height: 26px;
-    vertical-align: middle;
     
 }
 
-.aside-playlists{
+#aside-playlists{
+    
+
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
 }
 
-.aside-playlists > strong{
+#aside-playlists > strong{
     
+
     text-transform: uppercase;
     color: white;
 
@@ -149,12 +164,45 @@ aside{
 
 
 
+.dowload{
+    display: flex;    
+}
+
+.download img{
+    height: 14px;
+    margin-right: 5px;
+    vertical-align: middle;
+    
+}
+
+#aside-bottom hr{
+    margin-block: 14px;
+}
+
+
+.user{
+    display: flex;
+    align-items: center;
+    
+}
+
+.user img{
+    height: 26px;
+    aspect-ratio: 1;
+    
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background-color: #5a5a5a;
+}
+
 
 
 /* main */
 main{
     
-    flex-grow: 1;
+    width: calc(100%-230px);;
     overflow: auto;
 
     
@@ -162,7 +210,7 @@ main{
 
 
 .banner{
-    position: absolute;
+    position: fixed;
     width: calc(100vw - 230px);
 
     padding: 30px 24px 35px;
@@ -389,21 +437,75 @@ main{
 
 @media screen and (max-width: 568px) {
 
-    
-    .tile{
-        width: calc(100% / 2 - 10px / 2);
-                    
-    }
-
     aside{
-        min-width: 50px;
+        min-width:50px;
+        width: 50px;
+
+        padding-block: 10px;
+        
+        justify-content: space-between;
+        align-items: center;
+        
+        
+    }
+        
+    #logo{
+        display: none;
     }
 
+        
+    #primary-nav{
+        display: flex;
+        margin: 0;
+        
+        
+    }
+
+    #primary-nav .nav-item:first-of-type{
+        display: block;
+    }
+
+    #primary-nav span{
+        display: none;
+    }
+
+    #primary-nav img{
+        padding: 0;
+        margin: 0;
+    }
+
+    #aside-playlists{
+        display: none;
+    }
+
+    #aside-bottom span{
+        display: none;
+    }
+
+    #aside-bottom hr{
+        display: none;
+    }
+    
+    #aside-bottom img{
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    /* main section */
+    
     .banner{
         
         width: calc(100vw - 50px);
     
     }
+
+    .tile{
+        width: calc(100% / 2 - 10px / 2);
+                    
+    }
+
+    /* player section */
 
     .player-left img{
         width: 30px;      
