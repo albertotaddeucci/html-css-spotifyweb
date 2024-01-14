@@ -87,28 +87,35 @@
         <main>
             <div class="banner">
                 <div class="button">
-                    <ahref="#">effettua l'upgrade</a>
+                    <a href="#">effettua l'upgrade</a>
                 </div>
                 
             </div>
 
+
+            <div class="secondary-nav">
+                <ul>
+                    <li><a href="#">In evidenza</a><span class="active-btm" ></span></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li><a href="#">Classifiche</a></li>
+                    <li><a href="#">Generi e Mood</a></li>
+                    <li><a href="#">nuove uscite</a></li>
+                    <li><a href="#">scopri</a></li>
+                </ul>
+            </div>
+
             <section id="recently-played" class="padding-side">
-                <div class="secondary-nav">
-                    <ul>
-                        <li><a class="active-btm" href="#">In evidenza</a></li>
-                        <li><a href="#">Podcast</a></li>
-                        <li><a href="#">Classifiche</a></li>
-                        <li><a href="#">Generi e Mood</a></li>
-                        <li><a href="#">nuove uscite</a></li>
-                        <li><a href="#">scopri</a></li>
-                    </ul>
-                </div>
                 <h2>
                     Recently played
                 </h2>
                 <div class="row">
                     <div class="tile">
-                        <img src="img/cure.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/cure.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
+
                         <div class="title">
                             Heavy Metal
                         </div>
@@ -118,7 +125,11 @@
                         
                     </div>
                     <div class="tile">
-                        <img src="img/stranger.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/stranger.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)
                         </div>
@@ -128,7 +139,11 @@
                         
                     </div>
                     <div class="tile">
-                        <img src="img/aquietplace.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/aquietplace.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             A quiet place
                         </div>
@@ -138,7 +153,11 @@
                         
                     </div>
                     <div class="tile">
-                        <img src="img/split.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/split.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             Split
                         </div>
@@ -148,7 +167,11 @@
                         
                     </div>
                     <div class="tile">
-                        <img src="img/cure.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/cure.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             A cure for wellness
                         </div>
@@ -158,7 +181,11 @@
                         
                     </div>
                     <div class="tile">
-                        <img src="img/sinister.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/sinister.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             Sinister
                         </div>
@@ -178,14 +205,22 @@
                 </div>
                 <div class="row">
                     <div class="tile">
-                        <img src="img/radar.jpeg" alt="">
+                        <div class="tile-img">
+                            <img src="img/radar.jpeg" alt="">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+
+                        </div>
                         <div class="title">
                             Release Radar
                         </div>
                         
                     </div>
                     <div class="tile">
-                        <img src="img/mixdaily.jpeg" alt="">
+                        <div class="tile-img">
+                            <span><i class="fa-regular fa-circle-play"></i></span>
+                            <img src="img/mixdaily.jpeg" alt="">
+
+                        </div>
                         <div class="title">
                             Daily Mix 1
                         </div>
@@ -255,8 +290,12 @@
                 <div class="number-side-bar">
                     0:25
                 </div>
-                <div class="border-bar">
-                    <div class="played-bar"></div>
+                <div class="volume-bar">
+                    <div class="border-bar">
+                        <div class="circle-bar"></div>
+                        <div class="played-bar"></div>
+                    </div>
+                    
                 </div>
                 <div class="number-side-bar">
                     4:25
@@ -271,6 +310,7 @@
             <span class="icons"><i class="fa-solid fa-volume-high"></i></span>
             <div class="volume-bar">
                 <div class="border-bar">
+                    <div class="circle-bar"></div>
                     <div class="played-bar"></div>
                 </div>
 
