@@ -14,6 +14,7 @@ body{
 
 
 /* utility class */
+
 .container{
     display: flex;   
     
@@ -79,6 +80,7 @@ a{
 
 }
 
+
 /* active status */
 
 .active{
@@ -104,7 +106,7 @@ a{
 
 
 
-/* player and volume bar */
+/* player bar (with animation) and volume bar  */
 
 .border-bar{
     position: relative;
@@ -127,9 +129,9 @@ a{
     background-color: #5a5a5a;
 
     animation-name: play;
-    animation-duration: 20s;
+    animation-duration: 30s;
     animation-timing-function: linear;
-    /* animation-iteration-count: infinite; */
+    
 }
 
 @keyframes play {
@@ -168,7 +170,13 @@ a{
 
 
 
-/* aside */
+/* 
+    ************
+        ASIDE 
+    ************ 
+*/
+
+
 aside{
     position: relative;
 
@@ -322,7 +330,12 @@ aside > *:not(#primary-nav,#logo){
 
 
 
-/* main */
+/* 
+    ************
+        MAIN 
+    ************ 
+*/
+
 main{
     flex-grow: 1;
     /* width: calc(100%-230px); */
@@ -439,7 +452,13 @@ main{
 
 
 
-/* player */
+/* 
+    ************
+        PLAYER 
+    ************ 
+*/
+
+
 #player{
     display: flex;
     justify-content: space-between;
@@ -570,10 +589,34 @@ main{
     cursor: pointer;
 }
 
-.volume-bar{
-    width: 120px;
+.player-right .icons .fa-volume-high:hover .played-bar{
+    background-color: #c1eb7d;
+    cursor: pointer;
+
 }
 
+
+.player-right .volume-bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 130px;
+}
+
+.volume-bar:hover span{
+    color: white;
+}
+
+.volume-bar:hover .played-bar{
+    background-color: #c1eb7d;
+    cursor: pointer;    
+    
+}
+
+.volume-bar:hover .circle-bar{
+    display: block;
+}
 
 
 
